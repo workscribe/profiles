@@ -60,7 +60,7 @@
     "displayName": "Developer Utilities",
     "tags": ["utilities"],
     "description": "Cross-stack shell tools — curl, make, node, sed, ssh, tar, and npm edge cases",
-    "keywords": ["curl", "wget", "make", "node", "sed", "awk", "jq", "ssh", "rsync", "openssl", "tar", "zip", "dig", "lsof"]
+    "keywords": ["curl", "wget", "make", "node", "npm", "sed", "awk", "jq", "ssh", "rsync", "openssl", "tar", "zip", "dig", "lsof", "wc", "nc", "netstat", "sort", "uniq", "cut", "xargs", "diff", "patch"]
   },
   {
     "name": "java",
