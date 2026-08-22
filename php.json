@@ -1,0 +1,30 @@
+{
+  "name": "php",
+  "displayName": "PHP / Laravel",
+  "version": "1.0.0",
+  "detect": { "files": ["composer.json"] },
+  "rules": [
+    { "pattern": "^composer\\s+install\\b", "category": "dependencies", "metadata": { "tool": "composer" } },
+    { "pattern": "^composer\\s+require\\b", "category": "dependencies", "metadata": { "tool": "composer" } },
+    { "pattern": "^composer\\s+remove\\b", "category": "dependencies", "metadata": { "tool": "composer" } },
+    { "pattern": "^composer\\s+update\\b", "category": "dependencies", "metadata": { "tool": "composer" } },
+    { "pattern": "^composer\\s+dump-autoload\\b", "category": "building", "metadata": { "tool": "composer" } },
+    { "pattern": "^php\\s+artisan\\s+migrate\\b", "category": "building", "metadata": { "tool": "artisan", "subcommand": "migrate" } },
+    { "pattern": "^php\\s+artisan\\s+migrate:rollback\\b", "category": "building", "metadata": { "tool": "artisan", "subcommand": "migrate:rollback" } },
+    { "pattern": "^php\\s+artisan\\s+migrate:fresh\\b", "category": "building", "metadata": { "tool": "artisan", "subcommand": "migrate:fresh" } },
+    { "pattern": "^php\\s+artisan\\s+db:seed\\b", "category": "building", "metadata": { "tool": "artisan", "subcommand": "db:seed" } },
+    { "pattern": "^php\\s+artisan\\s+make:\\w+\\b", "category": "building", "metadata": { "tool": "artisan", "subcommand": "make" } },
+    { "pattern": "^php\\s+artisan\\s+test\\b", "category": "testing", "metadata": { "tool": "artisan" } },
+    { "pattern": "^pest\\b", "category": "testing", "metadata": { "tool": "pest" } },
+    { "pattern": "^php\\s+artisan\\s+serve\\b", "category": "running", "metadata": { "tool": "artisan", "subcommand": "serve" } },
+    { "pattern": "^php\\s+artisan\\s+tinker\\b", "category": "running", "metadata": { "tool": "artisan", "subcommand": "tinker" } },
+    { "pattern": "^php\\s+artisan\\s+queue:work\\b", "category": "running", "metadata": { "tool": "artisan", "subcommand": "queue:work" } },
+    { "pattern": "^php\\s+-S\\b", "category": "running", "metadata": { "tool": "php" } },
+    { "pattern": "^phpcs\\b", "category": "linting", "metadata": { "tool": "phpcs" } },
+    { "pattern": "^phpcbf\\b", "category": "linting", "metadata": { "tool": "phpcbf" } },
+    { "pattern": "^phpstan\\b", "category": "linting", "metadata": { "tool": "phpstan" } },
+    { "pattern": "^psalm\\b", "category": "linting", "metadata": { "tool": "psalm" } },
+    { "pattern": "^pint\\b", "category": "linting", "metadata": { "tool": "pint" } }
+  ],
+  "aiContext": "PHP/Laravel context: 'composer install/require' manages packages. 'php artisan migrate' applies database migrations. 'php artisan make:*' generates scaffolding (controllers, models, migrations). 'php artisan serve' starts the development server. 'php artisan tinker' is an interactive REPL. 'php artisan queue:work' processes background jobs. 'phpstan' and 'psalm' are static analysis tools."
+}

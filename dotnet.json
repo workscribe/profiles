@@ -1,0 +1,25 @@
+{
+  "name": "dotnet",
+  "displayName": ".NET / C#",
+  "version": "1.0.0",
+  "detect": { "files": ["global.json"] },
+  "rules": [
+    { "pattern": "^dotnet\\s+restore\\b", "category": "dependencies", "metadata": { "tool": "dotnet", "subcommand": "restore" } },
+    { "pattern": "^dotnet\\s+add\\s+package\\b", "category": "dependencies", "metadata": { "tool": "dotnet", "subcommand": "add package" } },
+    { "pattern": "^dotnet\\s+remove\\s+package\\b", "category": "dependencies", "metadata": { "tool": "dotnet", "subcommand": "remove package" } },
+    { "pattern": "^dotnet\\s+tool\\s+install\\b", "category": "dependencies", "metadata": { "tool": "dotnet", "subcommand": "tool install" } },
+    { "pattern": "^dotnet\\s+tool\\s+update\\b", "category": "dependencies", "metadata": { "tool": "dotnet", "subcommand": "tool update" } },
+    { "pattern": "^nuget\\s+install\\b", "category": "dependencies", "metadata": { "tool": "nuget" } },
+    { "pattern": "^dotnet\\s+build\\b", "category": "building", "metadata": { "tool": "dotnet", "subcommand": "build" } },
+    { "pattern": "^dotnet\\s+new\\b", "category": "building", "metadata": { "tool": "dotnet", "subcommand": "new" } },
+    { "pattern": "^dotnet\\s+ef\\s+migrations\\s+add\\b", "category": "building", "metadata": { "tool": "ef", "subcommand": "migrations add" } },
+    { "pattern": "^dotnet\\s+ef\\s+migrations\\s+remove\\b", "category": "building", "metadata": { "tool": "ef", "subcommand": "migrations remove" } },
+    { "pattern": "^dotnet\\s+ef\\s+database\\s+update\\b", "category": "building", "metadata": { "tool": "ef", "subcommand": "database update" } },
+    { "pattern": "^dotnet\\s+publish\\b", "category": "releasing", "metadata": { "tool": "dotnet", "subcommand": "publish" } },
+    { "pattern": "^dotnet\\s+test\\b", "category": "testing", "metadata": { "tool": "dotnet", "subcommand": "test" } },
+    { "pattern": "^dotnet\\s+run\\b", "category": "running", "metadata": { "tool": "dotnet", "subcommand": "run" } },
+    { "pattern": "^dotnet\\s+watch\\b", "category": "running", "metadata": { "tool": "dotnet", "subcommand": "watch" } },
+    { "pattern": "^dotnet\\s+format\\b", "category": "linting", "metadata": { "tool": "dotnet", "subcommand": "format" } }
+  ],
+  "aiContext": ".NET/C# context: 'dotnet restore' and 'dotnet add package' manage NuGet dependencies. 'dotnet ef migrations add' and 'dotnet ef database update' apply Entity Framework migrations. 'dotnet new' generates project or file scaffolding. 'dotnet publish' packages the app for deployment. 'dotnet watch' hot-reloads during development."
+}

@@ -1,0 +1,28 @@
+{
+  "name": "ruby",
+  "displayName": "Ruby / Rails",
+  "version": "1.0.0",
+  "detect": { "files": ["Gemfile"] },
+  "rules": [
+    { "pattern": "^bundle\\s+install\\b", "category": "dependencies", "metadata": { "tool": "bundler" } },
+    { "pattern": "^bundle\\s+add\\b", "category": "dependencies", "metadata": { "tool": "bundler" } },
+    { "pattern": "^bundle\\s+remove\\b", "category": "dependencies", "metadata": { "tool": "bundler" } },
+    { "pattern": "^bundle\\s+update\\b", "category": "dependencies", "metadata": { "tool": "bundler" } },
+    { "pattern": "^gem\\s+install\\b", "category": "dependencies", "metadata": { "tool": "gem" } },
+    { "pattern": "^gem\\s+update\\b", "category": "dependencies", "metadata": { "tool": "gem" } },
+    { "pattern": "^rails\\s+db:(migrate|rollback|seed|create|drop|reset|schema:load)\\b", "category": "building", "metadata": { "tool": "rails", "subcommand": "$1" } },
+    { "pattern": "^rails\\s+(generate|g)\\b", "category": "building", "metadata": { "tool": "rails", "subcommand": "generate" } },
+    { "pattern": "^rake\\s+db:(migrate|rollback|seed|create|drop|reset)\\b", "category": "building", "metadata": { "tool": "rake", "subcommand": "$1" } },
+    { "pattern": "^rake\\b", "category": "building", "metadata": { "tool": "rake" } },
+    { "pattern": "^rails\\s+(server|s)\\b", "category": "running", "metadata": { "tool": "rails", "subcommand": "server" } },
+    { "pattern": "^rails\\s+(console|c)\\b", "category": "running", "metadata": { "tool": "rails", "subcommand": "console" } },
+    { "pattern": "^bundle\\s+exec\\b", "category": "running", "metadata": { "tool": "bundler" } },
+    { "pattern": "^rails\\s+routes\\b", "category": "exploring", "metadata": { "tool": "rails", "subcommand": "routes" } },
+    { "pattern": "^rubocop\\b", "category": "linting", "metadata": { "tool": "rubocop" } },
+    { "pattern": "^standardrb\\b", "category": "linting", "metadata": { "tool": "standardrb" } },
+    { "pattern": "^sorbet\\b", "category": "linting", "metadata": { "tool": "sorbet" } },
+    { "pattern": "^srb\\s+tc\\b", "category": "linting", "metadata": { "tool": "sorbet" } },
+    { "pattern": "^steep\\s+check\\b", "category": "linting", "metadata": { "tool": "steep" } }
+  ],
+  "aiContext": "Ruby/Rails context: 'bundle install' resolves gem dependencies. 'rails db:migrate' applies database migrations. 'rails generate' scaffolds controllers, models, or migrations. 'rails server' starts the development web server. 'rails console' is an interactive REPL. 'rake' runs project tasks. 'rubocop' and 'standardrb' are Ruby linters."
+}

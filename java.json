@@ -1,0 +1,22 @@
+{
+  "name": "java",
+  "displayName": "Java",
+  "version": "1.0.0",
+  "detect": { "files": ["gradlew"] },
+  "rules": [
+    { "pattern": "^\\.?\\/gradlew\\s+dependencies\\b", "category": "dependencies", "metadata": { "tool": "gradle" } },
+    { "pattern": "^\\.?\\/gradlew\\s+(build|assemble|jar|war)\\b", "category": "building", "metadata": { "tool": "gradle", "subcommand": "$1" } },
+    { "pattern": "^\\.?\\/gradlew\\s+(test|check)\\b", "category": "testing", "metadata": { "tool": "gradle", "subcommand": "$1" } },
+    { "pattern": "^\\.?\\/gradlew\\s+(bootRun|run)\\b", "category": "running", "metadata": { "tool": "gradle", "subcommand": "$1" } },
+    { "pattern": "^\\.?\\/gradlew\\s+clean\\b", "category": "files", "metadata": { "tool": "gradle", "subcommand": "clean" } },
+    { "pattern": "^java\\s+-jar\\b", "category": "running", "metadata": { "tool": "java" } },
+    { "pattern": "^java\\s+-cp\\b", "category": "running", "metadata": { "tool": "java" } },
+    { "pattern": "^mvn\\s+spring-boot:run\\b", "category": "running", "metadata": { "tool": "maven", "subcommand": "spring-boot:run" } },
+    { "pattern": "^mvn\\s+quarkus:dev\\b", "category": "running", "metadata": { "tool": "maven", "subcommand": "quarkus:dev" } },
+    { "pattern": "^mvn\\s+flyway:(migrate|repair|info)\\b", "category": "building", "metadata": { "tool": "flyway", "subcommand": "$1" } },
+    { "pattern": "^mvn\\s+liquibase:(update|rollback)\\b", "category": "building", "metadata": { "tool": "liquibase", "subcommand": "$1" } },
+    { "pattern": "^checkstyle\\b", "category": "linting", "metadata": { "tool": "checkstyle" } },
+    { "pattern": "^spotbugs\\b", "category": "linting", "metadata": { "tool": "spotbugs" } }
+  ],
+  "aiContext": "Java context: './gradlew build' compiles and packages the application. './gradlew bootRun' starts a Spring Boot application. 'java -jar' runs a compiled JAR. 'mvn flyway:migrate' and 'mvn liquibase:update' apply database migrations. 'mvn spring-boot:run' and './gradlew run' start the application in development mode."
+}

@@ -1,0 +1,32 @@
+{
+  "name": "python-pip",
+  "displayName": "Python (pip / requirements.txt)",
+  "version": "1.0.0",
+  "detect": { "files": ["requirements.txt"] },
+  "rules": [
+    { "pattern": "^pip3\\s+install\\b", "category": "dependencies", "metadata": { "tool": "pip3" } },
+    { "pattern": "^python3?\\s+-m\\s+pip\\s+install\\b", "category": "dependencies", "metadata": { "tool": "pip" } },
+    { "pattern": "^python3?\\s+-m\\s+pytest\\b", "category": "testing", "metadata": { "tool": "pytest" } },
+    { "pattern": "^tox\\b", "category": "testing", "metadata": { "tool": "tox" } },
+    { "pattern": "^coverage\\s+run\\b", "category": "testing", "metadata": { "tool": "coverage" } },
+    { "pattern": "^python3?\\s+manage\\.py\\s+migrate\\b", "category": "building", "metadata": { "subcommand": "migrate" } },
+    { "pattern": "^python3?\\s+manage\\.py\\s+makemigrations\\b", "category": "building", "metadata": { "subcommand": "makemigrations" } },
+    { "pattern": "^python3?\\s+manage\\.py\\s+collectstatic\\b", "category": "building", "metadata": { "subcommand": "collectstatic" } },
+    { "pattern": "^alembic\\s+(upgrade|downgrade|revision|autogenerate)\\b", "category": "building", "metadata": { "tool": "alembic", "subcommand": "$1" } },
+    { "pattern": "^uvicorn\\b", "category": "running", "metadata": { "tool": "uvicorn" } },
+    { "pattern": "^gunicorn\\b", "category": "running", "metadata": { "tool": "gunicorn" } },
+    { "pattern": "^flask\\s+run\\b", "category": "running", "metadata": { "tool": "flask" } },
+    { "pattern": "^celery\\s+worker\\b", "category": "running", "metadata": { "tool": "celery", "subcommand": "worker" } },
+    { "pattern": "^celery\\s+beat\\b", "category": "running", "metadata": { "tool": "celery", "subcommand": "beat" } },
+    { "pattern": "^python3?\\s+manage\\.py\\s+shell\\b", "category": "running", "metadata": { "subcommand": "shell" } },
+    { "pattern": "^python3?\\s+manage\\.py\\s+runserver\\b", "category": "running", "metadata": { "subcommand": "runserver" } },
+    { "pattern": "^mypy\\b", "category": "linting", "metadata": { "tool": "mypy" } },
+    { "pattern": "^black\\b", "category": "linting", "metadata": { "tool": "black" } },
+    { "pattern": "^ruff\\b", "category": "linting", "metadata": { "tool": "ruff" } },
+    { "pattern": "^flake8\\b", "category": "linting", "metadata": { "tool": "flake8" } },
+    { "pattern": "^pylint\\b", "category": "linting", "metadata": { "tool": "pylint" } },
+    { "pattern": "^isort\\b", "category": "linting", "metadata": { "tool": "isort" } },
+    { "pattern": "^coverage\\s+report\\b", "category": "exploring", "metadata": { "tool": "coverage" } }
+  ],
+  "aiContext": "Python-specific context: 'python manage.py migrate' and 'alembic upgrade' are database migration steps. 'uvicorn', 'gunicorn', and 'flask run' are application server start events. 'celery worker' starts async task processing. Linting tools (mypy, black, ruff, flake8, pylint) check types and style."
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "name": "python",
+    "displayName": "Python",
+    "tags": ["language"],
+    "description": "Django, Flask, FastAPI, Poetry, pytest, and Python tooling",
+    "keywords": ["python", "python3", "pytest", "poetry", "pipenv", "uvicorn", "gunicorn", "celery", "django", "flask", "mypy", "black", "ruff", "flake8", "tox", "alembic", "conda"],
+    "detect": { "files": ["pyproject.toml"] }
+  },
+  {
+    "name": "python-pip",
+    "displayName": "Python (pip / requirements.txt)",
+    "tags": ["language"],
+    "description": "Python projects using pip and requirements.txt",
+    "keywords": ["python", "pip", "pip3"],
+    "detect": { "files": ["requirements.txt"] }
+  },
+  {
+    "name": "rust",
+    "displayName": "Rust",
+    "tags": ["language"],
+    "description": "Cargo commands not in the base normalizer — run, check, clippy, fmt, rustup",
+    "keywords": ["cargo", "rust", "rustup", "rustfmt", "clippy"],
+    "detect": { "files": ["Cargo.toml"] }
+  },
+  {
+    "name": "go",
+    "displayName": "Go",
+    "tags": ["language"],
+    "description": "Go modules, vet, gofmt, golangci-lint, and hot-reload with air",
+    "keywords": ["go", "golang", "golangci-lint", "air", "gofmt", "goimports", "staticcheck"],
+    "detect": { "files": ["go.mod"] }
+  },
+  {
+    "name": "ruby",
+    "displayName": "Ruby / Rails",
+    "tags": ["language"],
+    "description": "Bundler, Rails commands, rake, and RuboCop",
+    "keywords": ["bundle", "rails", "rake", "rubocop", "rspec", "gem"],
+    "detect": { "files": ["Gemfile"] }
+  },
+  {
+    "name": "php",
+    "displayName": "PHP / Laravel",
+    "tags": ["language"],
+    "description": "Composer, Artisan commands, PHPStan, and Pest",
+    "keywords": ["composer", "artisan", "phpstan", "psalm", "pest", "phpcs"],
+    "detect": { "files": ["composer.json"] }
+  },
+  {
+    "name": "dotnet",
+    "displayName": ".NET / C#",
+    "tags": ["language"],
+    "description": "dotnet CLI — build, test, run, migrations, and NuGet",
+    "keywords": ["dotnet", "csharp", "nuget", "ef"],
+    "detect": { "files": ["global.json"] }
+  },
+  {
+    "name": "java",
+    "displayName": "Java",
+    "tags": ["language"],
+    "description": "Gradle wrapper, Maven, Spring Boot, and Checkstyle",
+    "keywords": ["gradlew", "gradle", "mvn", "maven", "java", "spring"],
+    "detect": { "files": ["gradlew"] }
+  }
+]

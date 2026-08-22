@@ -1,0 +1,23 @@
+{
+  "name": "rust",
+  "displayName": "Rust",
+  "version": "1.0.0",
+  "detect": { "files": ["Cargo.toml"] },
+  "rules": [
+    { "pattern": "^cargo\\s+update\\b", "category": "dependencies", "metadata": { "tool": "cargo" } },
+    { "pattern": "^rustup\\s+update\\b", "category": "dependencies", "metadata": { "tool": "rustup" } },
+    { "pattern": "^rustup\\s+target\\s+add\\b", "category": "dependencies", "metadata": { "tool": "rustup" } },
+    { "pattern": "^rustup\\s+component\\s+add\\b", "category": "dependencies", "metadata": { "tool": "rustup" } },
+    { "pattern": "^rustup\\s+toolchain\\s+install\\b", "category": "dependencies", "metadata": { "tool": "rustup" } },
+    { "pattern": "^cargo\\s+check\\b", "category": "building", "metadata": { "tool": "cargo", "subcommand": "check" } },
+    { "pattern": "^cargo\\s+doc\\b", "category": "building", "metadata": { "tool": "cargo", "subcommand": "doc" } },
+    { "pattern": "^cross\\s+build\\b", "category": "building", "metadata": { "tool": "cross" } },
+    { "pattern": "^cross\\s+test\\b", "category": "testing", "metadata": { "tool": "cross" } },
+    { "pattern": "^cargo\\s+run\\b", "category": "running", "metadata": { "tool": "cargo", "subcommand": "run" } },
+    { "pattern": "^cargo\\s+clippy\\b", "category": "linting", "metadata": { "tool": "clippy" } },
+    { "pattern": "^cargo\\s+fmt\\b", "category": "linting", "metadata": { "tool": "rustfmt" } },
+    { "pattern": "^rustfmt\\b", "category": "linting", "metadata": { "tool": "rustfmt" } },
+    { "pattern": "^cargo\\s+clean\\b", "category": "files", "metadata": { "tool": "cargo", "subcommand": "clean" } }
+  ],
+  "aiContext": "Rust-specific context: 'cargo check' is a fast compile-only step that validates code without producing a binary. 'cargo clippy' is the linter; 'cargo fmt'/'rustfmt' format code. 'cargo run' compiles and starts the binary. 'cargo doc' generates documentation. 'rustup' manages toolchain installations."
+}
