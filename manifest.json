@@ -56,6 +56,13 @@
     "detect": { "files": ["global.json"] }
   },
   {
+    "name": "developer",
+    "displayName": "Developer Utilities",
+    "tags": ["utilities"],
+    "description": "Cross-stack shell tools — curl, make, node, sed, ssh, tar, and npm edge cases",
+    "keywords": ["curl", "wget", "make", "node", "sed", "awk", "jq", "ssh", "rsync", "openssl", "tar", "zip", "dig", "lsof"]
+  },
+  {
     "name": "java",
     "displayName": "Java",
     "tags": ["language"],
