@@ -17,6 +17,5 @@
     { "pattern": "^golangci-lint\\b", "category": "linting", "metadata": { "tool": "golangci-lint" } },
     { "pattern": "^staticcheck\\b", "category": "linting", "metadata": { "tool": "staticcheck" } },
     { "pattern": "^revive\\b", "category": "linting", "metadata": { "tool": "revive" } }
-  ],
-  "aiContext": "Go-specific context: 'go mod tidy' resolves and prunes dependencies. 'go generate' runs code generation (typically for mocks, protobufs, or embedded assets). 'go vet', 'golangci-lint', and 'staticcheck' are static analysis tools. 'air' is a hot-reload dev server for Go. 'gofmt'/'goimports' format code."
+  ]
 }

@@ -42,6 +42,5 @@
     { "pattern": "^autopep8\\b", "category": "linting", "metadata": { "tool": "autopep8" } },
     { "pattern": "^bandit\\b", "category": "linting", "metadata": { "tool": "bandit" } },
     { "pattern": "^coverage\\s+report\\b", "category": "exploring", "metadata": { "tool": "coverage" } }
-  ],
-  "aiContext": "Python-specific context: 'python manage.py migrate' and 'alembic upgrade' are database migration steps. 'poetry add', 'pipenv install', and 'pip3 install' are dependency installs. 'uvicorn', 'gunicorn', and 'flask run' are application server start events. 'celery worker' and 'celery beat' start async task processors. Linting tools (mypy, black, ruff, flake8, pylint) check types and style."
+  ]
 }

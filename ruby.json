@@ -23,6 +23,5 @@
     { "pattern": "^sorbet\\b", "category": "linting", "metadata": { "tool": "sorbet" } },
     { "pattern": "^srb\\s+tc\\b", "category": "linting", "metadata": { "tool": "sorbet" } },
     { "pattern": "^steep\\s+check\\b", "category": "linting", "metadata": { "tool": "steep" } }
-  ],
-  "aiContext": "Ruby/Rails context: 'bundle install' resolves gem dependencies. 'rails db:migrate' applies database migrations. 'rails generate' scaffolds controllers, models, or migrations. 'rails server' starts the development web server. 'rails console' is an interactive REPL. 'rake' runs project tasks. 'rubocop' and 'standardrb' are Ruby linters."
+  ]
 }
