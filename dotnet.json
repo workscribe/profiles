@@ -20,6 +20,5 @@
     { "pattern": "^dotnet\\s+run\\b", "category": "running", "metadata": { "tool": "dotnet", "subcommand": "run" } },
     { "pattern": "^dotnet\\s+watch\\b", "category": "running", "metadata": { "tool": "dotnet", "subcommand": "watch" } },
     { "pattern": "^dotnet\\s+format\\b", "category": "linting", "metadata": { "tool": "dotnet", "subcommand": "format" } }
-  ],
-  "aiContext": ".NET/C# context: 'dotnet restore' and 'dotnet add package' manage NuGet dependencies. 'dotnet ef migrations add' and 'dotnet ef database update' apply Entity Framework migrations. 'dotnet new' generates project or file scaffolding. 'dotnet publish' packages the app for deployment. 'dotnet watch' hot-reloads during development."
+  ]
 }

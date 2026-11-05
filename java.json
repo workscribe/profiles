@@ -17,6 +17,5 @@
     { "pattern": "^mvn\\s+liquibase:(update|rollback)\\b", "category": "building", "metadata": { "tool": "liquibase", "subcommand": "$1" } },
     { "pattern": "^checkstyle\\b", "category": "linting", "metadata": { "tool": "checkstyle" } },
     { "pattern": "^spotbugs\\b", "category": "linting", "metadata": { "tool": "spotbugs" } }
-  ],
-  "aiContext": "Java context: './gradlew build' compiles and packages the application. './gradlew bootRun' starts a Spring Boot application. 'java -jar' runs a compiled JAR. 'mvn flyway:migrate' and 'mvn liquibase:update' apply database migrations. 'mvn spring-boot:run' and './gradlew run' start the application in development mode."
+  ]
 }

@@ -25,6 +25,5 @@
     { "pattern": "^phpstan\\b", "category": "linting", "metadata": { "tool": "phpstan" } },
     { "pattern": "^psalm\\b", "category": "linting", "metadata": { "tool": "psalm" } },
     { "pattern": "^pint\\b", "category": "linting", "metadata": { "tool": "pint" } }
-  ],
-  "aiContext": "PHP/Laravel context: 'composer install/require' manages packages. 'php artisan migrate' applies database migrations. 'php artisan make:*' generates scaffolding (controllers, models, migrations). 'php artisan serve' starts the development server. 'php artisan tinker' is an interactive REPL. 'php artisan queue:work' processes background jobs. 'phpstan' and 'psalm' are static analysis tools."
+  ]
 }

@@ -18,6 +18,5 @@
     { "pattern": "^cargo\\s+fmt\\b", "category": "linting", "metadata": { "tool": "rustfmt" } },
     { "pattern": "^rustfmt\\b", "category": "linting", "metadata": { "tool": "rustfmt" } },
     { "pattern": "^cargo\\s+clean\\b", "category": "files", "metadata": { "tool": "cargo", "subcommand": "clean" } }
-  ],
-  "aiContext": "Rust-specific context: 'cargo check' is a fast compile-only step that validates code without producing a binary. 'cargo clippy' is the linter; 'cargo fmt'/'rustfmt' format code. 'cargo run' compiles and starts the binary. 'cargo doc' generates documentation. 'rustup' manages toolchain installations."
+  ]
 }

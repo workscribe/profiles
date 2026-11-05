@@ -37,6 +37,5 @@
     { "pattern": "^nslookup\\b", "category": "exploring", "metadata": { "tool": "nslookup" } },
     { "pattern": "^lsof\\b", "category": "exploring", "metadata": { "tool": "lsof" } },
     { "pattern": "^netstat\\b", "category": "exploring", "metadata": { "tool": "netstat" } }
-  ],
-  "aiContext": "Common developer utilities: 'curl' and 'wget' are HTTP requests (testing endpoints or downloading assets). 'make' runs project build targets. 'ssh' and 'rsync' are remote access or file sync operations. 'openssl' generates certificates or keys. 'sed', 'awk', 'xargs', 'diff' are file processing operations. 'node' runs a Node.js script directly."
+  ]
 }
